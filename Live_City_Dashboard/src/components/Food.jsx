@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 
-export default function Food() {
+export default function Food({ setPage }) {
     return (
         <>
-            Food 
+        food
         </>
     )
 }
