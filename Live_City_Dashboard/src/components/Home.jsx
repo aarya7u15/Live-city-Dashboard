@@ -15,6 +15,65 @@ function Home({ setPage }) {
   const [msg,setMsg] = useState("")
   const [is_logged_in, setIs_logged_in] = useState(false);
   const [show_success, setShow_success] = useState(false);
+  const [alerts, setAlerts] = useState([]);
+
+
+function get_random_alerts() {
+  const shuffled = [...traffic_api].sort(() => 0.5 - Math.random());
+  setAlerts(shuffled.slice(0, 4));
+}
+
+
+const traffic_api = [
+  {
+    id: 1,
+    road: "Outer Ring Road",
+    message: "Heavy congestion near Marathahalli",
+    priority: "high",
+    delay: "28 min",
+    lastUpdated: "11:45 AM",
+  },
+  {
+    id: 2,
+    road: "MG Road",
+    message: "Slow moving traffic near Trinity Circle",
+    priority: "moderate",
+    delay: "14 min",
+    lastUpdated: "11:42 AM",
+  },
+  {
+    id: 3,
+    road: "Indiranagar",
+    message: "Light traffic near 100 Feet Road",
+    priority: "low",
+    delay: "5 min",
+    lastUpdated: "11:39 AM",
+  },
+  {
+    id: 4,
+    road: "Hebbal Flyover",
+    message: "Accident reported, expect delays",
+    priority: "high",
+    delay: "35 min",
+    lastUpdated: "11:47 AM",
+  },
+  {
+    id: 5,
+    road: "Silk Board Junction",
+    message: "Moderate traffic due to signal delay",
+    priority: "moderate",
+    delay: "18 min",
+    lastUpdated: "11:44 AM",
+  },
+  {
+    id: 6,
+    road: "Whitefield Main Road",
+    message: "Traffic is moving smoothly",
+    priority: "low",
+    delay: "3 min",
+    lastUpdated: "11:41 AM",
+  },
+];
 
 
 
@@ -40,6 +99,13 @@ function Home({ setPage }) {
     let hola = setInterval(()=>{
       getWeather();
     },300000)
+
+    get_random_alerts();
+
+    let alert_timer = setInterval(() => {
+      get_random_alerts();
+    }, 300000);
+
 
     return () => {
       clearInterval(hola);
@@ -276,8 +342,43 @@ function checking_signup(e) {
                 </div>
               </div>
             {/* weatherbox end */}
-              <div className="wthr_box">
+              <div className="wthr_box_2">
+                <div className="traffic_alerts">
+                  {alerts
+                    .filter((alert) => alert.priority === "high")
+                    .map((alert) => (
+                      <div key={alert.id} className="traffic_card high_alert">
+                        <h4>{alert.road}</h4>
+                        <p>{alert.message}</p>
+                        <span>{alert.delay}</span>
+                      </div>
+                    ))}
 
+                  {alerts
+                    .filter((alert) => alert.priority === "moderate")
+                    .map((alert) => (
+                      <div key={alert.id} className="traffic_card moderate_alert">
+                        <h4>{alert.road}</h4>
+                        <p>{alert.message}</p>
+                        <span>{alert.delay}</span>
+                      </div>
+                    ))}
+
+                  {alerts
+                    .filter((alert) => alert.priority === "low")
+                    .map((alert) => (
+                      <div key={alert.id} className="traffic_card low_alert">
+                        <h4>{alert.road}</h4>
+                        <p>{alert.message}</p>
+                        <span>{alert.delay}</span>
+                      </div>
+                    ))}
+                    <div className="traffic_header">
+                      <p>
+                        • Updated {traffic_api[0].lastUpdated}
+                      </p>
+                    </div>
+                </div>
               </div>
             </div>
           </div>

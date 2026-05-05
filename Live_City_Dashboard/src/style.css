@@ -193,6 +193,28 @@
   flex-direction: column;
   width: 410px;
   min-height: 255px;
+  max-height:285px;
+  /* margin: 32px auto 0; */
+  margin-top: 42px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 44px 36px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.13);
+  border-radius: 20px;
+  border: 1px solid white ;
+  gap: 10px;
+}
+
+.wthr_box_2 {
+  flex-direction: column;
+  width: 500px;
+  min-height: 255px;
+  max-height: 396px;
   /* margin: 32px auto 0; */
   margin-top: 42px;
   margin-bottom: 32px;
@@ -518,4 +540,76 @@
 
 .register_success_close path {
   fill: #2b641e;
+}
+
+.traffic_header h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.traffic_header p {
+  margin: 4px 0 8px;
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 700;
+}
+
+.traffic_alerts {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+.traffic_card {
+  width: 100%;
+  min-height: 72px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+}
+
+.traffic_card h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.traffic_card p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.traffic_card span {
+  flex-shrink: 0;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.high_alert {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #7f1d1d;
+}
+
+.moderate_alert {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #78350f;
+}
+
+.low_alert {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.45);
+  color: #1e3a8a;
 }
