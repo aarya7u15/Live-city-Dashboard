@@ -27,7 +27,7 @@ export default function Traffic({ setPage }) {
                         </button>
             
                         <button className="nav_icon" onClick={() => setPage("alerts")}>
-                          <i class="fa-solid fa-bell"></i>
+                          <i className="fa-solid fa-bell"></i>
                         </button>
             
                         <div>
