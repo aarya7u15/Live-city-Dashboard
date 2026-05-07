@@ -250,7 +250,8 @@
 }
 
 .stts {
-    color: grey;
+    color: red;
+    font-size: 20px;
 }
 
 .prnt {
@@ -612,4 +613,571 @@
   background: rgba(59, 130, 246, 0.18);
   border-color: rgba(59, 130, 246, 0.45);
   color: #1e3a8a;
+}
+
+
+.food_loading {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 40px;
+}
+
+
+/* start */
+
+
+
+.food_hero_sun {
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 60px;
+  padding-top: 60px;
+  background-blend-mode: overlay;
+  background: linear-gradient(
+  135deg,
+  #1b263b,
+  #415a77,
+  #778da9,
+  #c9ada7,
+  #f2cc8f
+);
+  color: white;
+  text-align: center;
+}
+
+.food_hero_content_sun h1 {
+  margin: 0;
+  font-size: 62px;
+  font-weight: 900;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.food_hero_content_sun p {
+  margin: 18px 0 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.food_hero_content_sun h3 {
+  margin: 16px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+
+
+/* /////////////////////////// */
+
+
+.food_hero_hot {
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 350px;
+  padding-top: 60px;
+
+  background-image: url("./photos/hot_day_2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: white;
+  text-align: center;
+}
+
+.food_hero_content_hot h1 {
+  /* color: #a04b01; */
+  margin: 0;
+  font-size: 65px;
+  font-weight: 900;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.food_hero_content_hot p {
+  
+  margin: 18px 0 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.food_hero_content_hot h3 {
+  margin: 16px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* /////////////////////////// */
+
+
+
+
+.food_hero_cold {
+  height: 300px;
+  display: flex;
+  align-items: flex-start;
+  padding-left: 60px;
+  padding-top: 60px;
+  background-blend-mode: overlay;
+  background: linear-gradient(
+  to bottom right,
+  #127dae 0%,
+  #91d3f2 30%,
+  #81d4fa 65%,
+  #4fc3f7 100%
+);
+  color: black;
+  text-align: center;
+}
+
+.food_hero_content_cold h1 {
+  margin: 0;
+  font-size: 62px;
+  font-weight: 900;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.food_hero_content_cold p {
+  margin: 18px 0 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.food_hero_content_cold h3 {
+  margin: 16px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* /////////////////////////// */
+
+
+/* end */
+.food_section {
+  padding: 55px 38px;
+  background: #f8fafc;
+}
+
+.food_section h2 {
+  margin: 0 0 28px;
+  font-size: 34px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.food_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.food_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+
+.food_grid_1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  max-height: 40px;
+}
+
+
+.food_card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  transition: 0.25s ease;
+}
+
+.food_card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.14);
+}
+
+.food_card_img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+}
+
+.food_card_body {
+  padding: 15px;
+}
+
+.food_card_body h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.food_location {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.food_rating {
+  margin: 10px 0 0;
+  color: #f59e0b;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .food_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .food_hero_content h1 {
+    font-size: 42px;
+  }
+
+  .food_hero_content p {
+    font-size: 19px;
+  }
+
+  .food_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* loader  start */
+.Loader_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  --main-size: 4em;
+  --text-color: black;
+  --shine-color: #ffffff40;
+  --shadow-color: #aaaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  font-size: var(--main-size);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--text-color);
+  width: 9em;
+  height: 2em;
+  filter: drop-shadow(0 0 0.05em var(--shine-color));
+}
+
+.loader .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.loader .text:nth-child(1) {
+  clip-path: polygon(0% 0%, 11.11% 0%, 11.11% 100%, 0% 100%);
+  font-size: calc(var(--main-size) / 20);
+  margin-left: -2.1em;
+  opacity: 0.6;
+}
+
+.loader .text:nth-child(2) {
+  clip-path: polygon(11.11% 0%, 22.22% 0%, 22.22% 100%, 11.11% 100%);
+  font-size: calc(var(--main-size) / 16);
+  margin-left: -0.98em;
+  opacity: 0.7;
+}
+
+.loader .text:nth-child(3) {
+  clip-path: polygon(22.22% 0%, 33.33% 0%, 33.33% 100%, 22.22% 100%);
+  font-size: calc(var(--main-size) / 13);
+  margin-left: -0.33em;
+  opacity: 0.8;
+}
+
+.loader .text:nth-child(4) {
+  clip-path: polygon(33.33% 0%, 44.44% 0%, 44.44% 100%, 33.33% 100%);
+  font-size: calc(var(--main-size) / 11);
+  margin-left: -0.05em;
+  opacity: 0.9;
+}
+
+.loader .text:nth-child(5) {
+  clip-path: polygon(44.44% 0%, 55.55% 0%, 55.55% 100%, 44.44% 100%);
+  font-size: calc(var(--main-size) / 10);
+  margin-left: 0em;
+  opacity: 1;
+}
+
+.loader .text:nth-child(6) {
+  clip-path: polygon(55.55% 0%, 66.66% 0%, 66.66% 100%, 55.55% 100%);
+  font-size: calc(var(--main-size) / 11);
+  margin-left: 0.05em;
+  opacity: 0.9;
+}
+
+.loader .text:nth-child(7) {
+  clip-path: polygon(66.66% 0%, 77.77% 0%, 77.77% 100%, 66.66% 100%);
+  font-size: calc(var(--main-size) / 13);
+  margin-left: 0.33em;
+  opacity: 0.8;
+}
+
+.loader .text:nth-child(8) {
+  clip-path: polygon(77.77% 0%, 88.88% 0%, 88.88% 100%, 77.77% 100%);
+  font-size: calc(var(--main-size) / 16);
+  margin-left: 0.98em;
+  opacity: 0.7;
+}
+
+.loader .text:nth-child(9) {
+  clip-path: polygon(88.88% 0%, 100% 0%, 100% 100%, 88.88% 100%);
+  font-size: calc(var(--main-size) / 20);
+  margin-left: 2.1em;
+  opacity: 0.6;
+}
+
+.loader .text span {
+  animation:
+    scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
+    shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
+}
+
+.loader .text:nth-child(1) span {
+  background: linear-gradient(
+    to right,
+    var(--text-color) 4%,
+    var(--shadow-color) 7%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(2) span {
+  background: linear-gradient(
+    to right,
+    var(--text-color) 9%,
+    var(--shadow-color) 13%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(3) span {
+  background: linear-gradient(
+    to right,
+    var(--text-color) 15%,
+    var(--shadow-color) 18%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(4) span {
+  background: linear-gradient(
+    to right,
+    var(--text-color) 20%,
+    var(--shadow-color) 23%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(6) span {
+  background: linear-gradient(
+    to right,
+    var(--shadow-color) 29%,
+    var(--text-color) 32%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(7) span {
+  background: linear-gradient(
+    to right,
+    var(--shadow-color) 34%,
+    var(--text-color) 37%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(8) span {
+  background: linear-gradient(
+    to right,
+    var(--shadow-color) 39%,
+    var(--text-color) 42%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .text:nth-child(9) span {
+  background: linear-gradient(
+    to right,
+    var(--shadow-color) 45%,
+    var(--text-color) 48%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+.loader .line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 0.05em;
+  width: calc(var(--main-size) / 2);
+  margin-top: 0.9em;
+  border-radius: 0.05em;
+}
+
+.loader .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--text-color);
+  opacity: 0.3;
+}
+
+.loader .line::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--text-color);
+  border-radius: 0.05em;
+  transform: translateX(-90%);
+  animation: wobble 2s cubic-bezier(0.5, 0.8, 0.5, 0.2) infinite;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateX(-90%);
+  }
+  50% {
+    transform: translateX(90%);
+  }
+  100% {
+    transform: translateX(-90%);
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    background-position: -98% 0;
+  }
+  100% {
+    background-position: 102% 0;
+  }
+}
+/* loader end */
+
+
+
+#rain-layer {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; 
+  z-index: 9999; 
+  overflow: hidden;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 2px;
+  height: 15px;
+  background: rgba(173, 216, 230, 0.6);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translate(15px, 100vh);
+  }
+}
+
+
+.snow_layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.snow {
+  position: absolute;
+  top: -20px;
+
+  background: white;
+  border-radius: 50%;
+
+  filter: blur(1px);
+
+  animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+  }
+
+  25% {
+    transform: translateY(25vh) translateX(15px);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(-15px);
+  }
+
+  75% {
+    transform: translateY(75vh) translateX(10px);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-10px);
+  }
 }

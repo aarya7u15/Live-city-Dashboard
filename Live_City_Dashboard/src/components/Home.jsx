@@ -5,6 +5,40 @@ import sunny from "../photos/sunny-city.png";
 import winter from "../photos/winter-city.png"
 
 
+
+
+export function set_day_weather(temperature) {
+  let val = "sun";
+
+  if (temperature < 20) {
+  val = "cold";
+} else if (temperature < 26) {
+  val = "sun";
+} else if (temperature >= 26) {
+  val = "hot";
+}
+
+return val
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Home({ setPage }) {
   const [wthr,setWthr] = useState({})
   const [units,setUnits] = useState({})
@@ -114,15 +148,19 @@ const traffic_api = [
 
 
 
-let val = "sun";
+// let val = "sun";
 
-if (wthr.temperature < 20) {
-  val = "cold";
-} else if (wthr.temperature < 26) {
-  val = "sun";
-} else if (wthr.temperature >= 26) {
-  val = "hot";
-}
+// if (wthr.temperature < 20) {
+//   val = "cold";
+// } else if (wthr.temperature < 26) {
+//   val = "sun";
+// } else if (wthr.temperature >= 26) {
+//   val = "hot";
+// }
+
+let val = set_day_weather(wthr.temperature);
+
+
 
 if (wthr.temperature < 15) {
     symbl = <i class="fa-solid fa-snowflake" style={{ fontSize: "45px", paddingTop: "14px", color: "orange"}}></i>;
@@ -374,7 +412,7 @@ function checking_signup(e) {
                       </div>
                     ))}
                     <div className="traffic_header">
-                      <p>
+                      <p> 
                         • Updated {traffic_api[0].lastUpdated}
                       </p>
                     </div>
